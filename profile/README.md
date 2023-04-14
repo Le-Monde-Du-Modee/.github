@@ -1,3 +1,3 @@
 # LMDM's Github
 
-![Schema](schema.png)
+[Schema](https://github.com/Le-Monde-Du-Modee/.github/blob/main/profile/schema.png)
