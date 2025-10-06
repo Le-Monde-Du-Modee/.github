@@ -17,3 +17,9 @@
 `Shop` : **32781**  
 `Auth API` : **32782**  
 `Account` : **32783**  
+
+## Opened PORTS
+`HTTP` : 80  
+`HTTPS` : 43  
+`CERTBOT` : 8080  
+`NGINX-UI` : 9000  
