@@ -1,0 +1,26 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name default.lmdm.org;
+    return 307 https://lmdm.org/;
+    location /.well-known/acme-challenge {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real_IP $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr:$remote_port;
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name default.lmdm.org;
+    ssl_certificate /etc/nginx/ssl/lmdm.org/fullchain.cer;
+    ssl_certificate_key /etc/nginx/ssl/lmdm.org/private.key;
+    return 307 https://lmdm.org/;
+    location /.well-known/acme-challenge {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real_IP $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr:$remote_port;
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
