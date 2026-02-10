@@ -17,6 +17,7 @@
 `Shop` : **32781**  
 `Auth API` : **32782**  
 `Account` : **32783**  
+`Discord Bot` : **32784**  
 
 ## Opened PORTS
 `HTTP` : 80  
