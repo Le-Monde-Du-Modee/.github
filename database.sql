@@ -70,6 +70,7 @@ CREATE TABLE `shop`.`discounts` (
   `id` VARCHAR(36) PRIMARY KEY NOT NULL DEFAULT (UUID()),
   `discount_type` ENUM('percentage', 'fixed') NOT NULL DEFAULT 'percentage',
   `discount_value` INT NOT NULL,
+  `code` VARCHAR(255) NOT NULL,
   `max_discount_amount` INT,
   `metadata` JSON,
   `min_order_amount` INT NOT NULL DEFAULT 0,
