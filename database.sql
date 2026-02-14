@@ -1,5 +1,14 @@
 CREATE SCHEMA `shop` ;
 CREATE SCHEMA `accounts`;
+CREATE SCHEMA `admin`;
+
+CREATE TABLE `admin`.`users` (
+  `id` VARCHAR(36) PRIMARY KEY NOT NULL DEFAULT (UUID()),
+  `identifier` VARCHAR(16) NOT NULL,
+  `hash` VARCHAR(64) NOT NULL,
+  `name` VARCHAR(16) NOT NULL DEFAULT 'Admin',
+  UNIQUE INDEX `idusers_UNIQUE` (`id` ASC) VISIBLE
+);
 
 CREATE TABLE `accounts`.`users` (
   `id` VARCHAR(36) PRIMARY KEY NOT NULL DEFAULT (UUID()),
