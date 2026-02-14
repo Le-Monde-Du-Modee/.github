@@ -4,6 +4,7 @@ CREATE SCHEMA `accounts`;
 CREATE TABLE `accounts`.`users` (
   `id` VARCHAR(36) PRIMARY KEY NOT NULL DEFAULT (UUID()),
   `ms_uuid` VARCHAR(36) NOT NULL,
+  `premium` TINYINT DEFAULT 0,
   UNIQUE INDEX `idusers_UNIQUE` (`id` ASC) VISIBLE
 );
 
