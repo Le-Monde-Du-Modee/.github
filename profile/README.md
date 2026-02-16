@@ -18,6 +18,7 @@
 `Auth API` : **32782**  
 `Account` : **32783**  
 `Discord Bot` : **32784**  
+`Mailcow` : **32785**
 
 ## Opened PORTS
 `HTTP` : 80  
